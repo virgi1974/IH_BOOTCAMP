@@ -1,0 +1,13 @@
+button {
+	background-color: #404040 ;
+	color: white;
+}
+form {
+	border: 1px solid gray;
+	padding: 5px;
+	text-align: center;
+}
+#logo_holder img{
+	width: 100px;
+	
+}

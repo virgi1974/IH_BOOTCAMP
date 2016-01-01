@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WEB CALCULATOR</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<ul>
+										
+	<% @my_list.each do |post| %>
+	<li>
+		<p>titulo del post: &nbsp&nbsp	<a href="/details/<%= post.title %>"><%= post.title %></a>
+			<span><%= post.text %>&nbsp&nbsp
+		</span>
+			<span>fecha de creacion &nbsp&nbsp<%= post.creation_date %></span> 
+		</p> 
+		
+	</li>
+	<% end %>
+
+</ul>
+<form action="/" method="post">
+	<button type="submit" name="reverse" value="yes">LATEST FIRST</button>
+	<button type="submit">OLDEST FIRST</button>
+</form>
+<br>
+<p><a href="/new_post">CREATE NEW POST</a></p>
+
+
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

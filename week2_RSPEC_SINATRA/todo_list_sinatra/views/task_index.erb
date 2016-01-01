@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to the todo list</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h3>This is my list</h3>
+
+<ul>
+	<% @content.each do |elem| %>
+	<li>
+		<%= elem.id %>  &nbsp <a href="/complete/<%=elem.id%>"> <%= elem.content %> </a>
+
+		&nbsp ---->	&nbsp<% if elem.completed == "false" %> 
+				<%= "NO COMPLETED" %>
+			<% else %>
+				<%= "COMPLETED" %>
+			<% end %>
+
+	</li>
+	<% end %>
+</ul>
+
+<p><a href="/new_task">add a new task</a></p>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WEB CALCULATOR</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<div id="logo_holder">
+		<img src="./logo.png" alt="logo" />
+	</div>
+	
+
+	<form action="/calculate" method="POST">
+		<input type="number" name="first_number" value="<%= @previous %>" placeholder="1st number">
+		<input type="number" name="second_number" placeholder="2nd number">
+
+		<!-- <button type="submit" name="btn" value="calculate">CALCULATE</button> -->
+
+		<button type="submit" name="operation" value="add">+</button>
+		<button type="submit" name="operation" value="substract">-</button>
+		<button type="submit" name="operation" value="multiply">*</button>
+		<button type="submit" name="operation" value="divide">/</button>
+
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+	<!-- <ul>
+		<li><a href="/add">Add</a></li>
+		<li><a href="/substract">Substract</a></li>
+		<li><a href="/multiply">Multiply</a></li>
+		<li><a href="/divide">Divide</a></li>
+	</ul> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

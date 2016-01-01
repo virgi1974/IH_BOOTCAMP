@@ -1,0 +1,10 @@
+1 tarea1 2015-11-08 19:05  false
+2 tarea2 2015-11-08 19:09  false
+3 tarea3 2015-11-08 19:39  false
+4 tarea5 2015-11-10 13:54  false
+1 tarea1 2015-11-0819:05  true
+1 tarea1 2015-11-0819:05  true
+1 tarea1 2015-11-0819:05true  true
+2 tarea2 2015-11-0819:09  true
+21 comer 2015-12-23 11:27  false
+21 comer 2015-12-2311:27  true
