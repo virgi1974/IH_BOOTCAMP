@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p> <%= flash_message %> </p>
+
+	<h1 style="text-align:center;">PROJECTO <%= @project.id %></h1>
+
+	<%= link_to("go back to projects",projects_path) %>
+	<br>
+	<%= link_to("create a new entry",new_project_entry_path(@project)) %>
+
+	<ul>
+		<% @entries.each do |entry| %>
+		<li>PROJECT_ID ---- <%= @project.id %></li>
+		<li>ID ---- <%= entry.id %></li>
+		<li>HOURS ---- <%= entry.hours %></li>
+		<li>MINUTES --- <%= entry.minutes %></li>
+		<li>COMMENTS --- <%= entry.comments %></li>
+		<li>DATE --- <%= entry.date %></li>
+		<li>TOTAL HOURS --- <%= show_total_hours(@project) %></li>
+
+		<%= link_to("edit entry", edit_project_entry_path(@project, entry)) %>
+		<%= link_to("Delete", project_entry_path(@project, entry), method: :delete, data: {confirm: 'are you sure?'}) %>
+		<hr>
+		<% end %>
+	</ul>
+	<p>SUMA TOTAL = <%= show_total_hours(@project) %></p>
+
+
+
+</body>
+</html>

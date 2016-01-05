@@ -1,0 +1,10 @@
+<h1>USERS LIST</h1>
+<div class="users">
+  <% @users.each do |user| %>
+    <ul>
+      <li><%= "#{user.name} - #{user.email}    " %>&nbsp;&nbsp; <%= link_to("My profile", user_path(user.id)) %> </li>
+      
+    </ul>
+  <% end %>
+</div>
+<%= link_to("Add a New User", new_user_path(),class: "my-links") %> 

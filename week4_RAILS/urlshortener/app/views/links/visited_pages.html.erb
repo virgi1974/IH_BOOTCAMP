@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10 Most visited</title>
+</head>
+<body>
+<h1>LIST OF VISITED PAGES</h1>
+<hr>
+	<ul>
+	<% @visited_pages.each do |link| %>
+		<li>
+			<strong><%= link.longlink %></strong> has been visited <strong><%= link.visited %>
+				
+			</strong> times
+		</li>
+	<% end %>	
+	</ul>
+	<hr>
+	<%= link_to("Back", :back) %>
+
+</body>
+</html>

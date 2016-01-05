@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+#container{
+	margin: auto;
+	border: solid;
+	width: 70%;
+	padding: 10px;
+}
+.sub {
+	background-color: black;
+	color: white;
+}
+	</style>
+</head>
+<body>
+<h1>User: <%= @person.name %></h1>
+<hr>
+<ul>
+	<% @person.projects.each do |project| %>
+	<li> <%= project.name %> </li>
+	<% end %>
+</ul>
+<hr>
+<div id="container">
+	Choose a project!
+	<%= form_for [@person] do |f| %>
+	<%= f.collection_select(:projects,@projects_not_associated, :id, :name) %>
+	<%= f.submit 'Save' %>
+	<% end %>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

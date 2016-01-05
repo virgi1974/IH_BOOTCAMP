@@ -1,0 +1,64 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+#bids{
+	/*text-align: center;*/
+	padding: 50px;
+}
+#product-bids {
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+	
+}
+#form-bids {
+	margin-right: 100px;
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+
+}
+
+#nav {
+	height: 100px;
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding-left: 150px;
+	list-style: none; 
+	background-color: red;
+	vertical-align: middle;
+	
+}
+#nav li {
+	float: left; 
+	padding: 10px;
+	color: white;
+  margin: 30px 50px;
+  vertical-align: middle;
+  text-decoration: none;
+        
+}
+#nav li a{
+	color: white;
+  margin: 10px;
+  vertical-align: middle;
+  text-decoration: none;      
+}
+.my-links{
+	font-weight: bold;
+	font-size: 1.4em;
+	color: #ed490a;
+	margin: 10px;
+}
+h1{
+	text-align: center;
+}
+.users {
+	text-align: center;
+}
+

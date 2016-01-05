@@ -1,0 +1,31 @@
+<p> <%= flash_message %> </p>	 
+
+<% if @entry.errors.any? %>
+	<ul>
+		<% @entry.errors.full_messages.each do |error| %>
+			<li style="background-color: red; margin: 5px;"> <%= error %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+
+<h1>Add a new entry!!!!!!</h1>
+<div id="container">
+	<%= form_for [@project, @entry] do |f| %>
+	<div>
+		<%= f.label :hours %>
+		<%= f.text_field :hours %>
+		
+	</div>
+
+		<%= f.label :minutes %>
+		<%= f.text_field :minutes %>
+	
+		<%= f.label :date %>
+		<%= f.date_field :date %>
+	
+
+		<%= f.submit 'SAVE CHANGES',class: 'sub' %>
+<%= link_to("cancel",project_entries_path(@project)) %>
+	<% end %>
+</div>

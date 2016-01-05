@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<%= link_to('VISITED PAGES',links_visited_pages_path) %>
+<br>
+<%= link_to('10 MOST VISITED PAGES',links_most_visited_pages_path) %>
+<hr>
+  <h1>Add a new url</h1>
+
+<form action="/links" method="POST">
+  <div>
+    <label for="link_long">URL</label>
+    <input type="text" name="link[long]" id="link_long">
+  </div>
+   <button type="submit">Send URL</button>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>
+<hr>
+<%= flash_message %> 
+<% if @short_link %>
+  <p> the short URL already exists: 
+    <strong>  <%= @short_link %> </strong> 
+  </p>
+<% end %>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+#container{
+	margin: auto;
+	border: solid;
+	width: 70%;
+	padding: 10px;
+}
+.sub {
+	background-color: black;
+	color: white;
+}
+</style>
+</head>
+<body>
+		 <%= link_to('new user', new_person_path) %>
+	<ul>
+	 <% @persons.each do |person|%>
+	 <li>User: <%= person.name %></li>
+	 <%= link_to(person.name, person_path(person.id)) %>
+	 <% end %>
+	</ul>
+</body>
+</html>

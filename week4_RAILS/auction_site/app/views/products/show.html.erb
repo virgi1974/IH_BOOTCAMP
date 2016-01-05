@@ -1,0 +1,28 @@
+<p> <%= flash_message %> </p>  
+<% if @new_bid.errors.any? %>
+  <ul>
+    <% @new_bid.errors.full_messages.each do |error| %>
+      <li style="background-color: red; margin: 5px;"> <%= error %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p><strong>Product&nbsp;&nbsp;</strong><%= @product.title %>
+<strong>&nbsp;Description&nbsp;&nbsp;</strong><%= @product.description %>
+<strong>&nbsp;Deadline</strong>&nbsp;  <%= @product.deadline.strftime("%d/%m/%Y") %>
+</p> 
+<hr>
+
+<section id="bids">
+  <% if check_deadline(@product) == false %>
+    <p>THE DEADLINE FOR THIS ITEM HAS EXPIRED</p>
+    <p>THE ITEM HAS BEEN SOLD BY <%= highest_bid(@product) %> EUROS !!!</p>
+  <% else %>
+    <%= render "bidform" %>
+    <%= render "bids" %>
+  <% end %>
+
+</section>
+
+<%= link_to("Product list", products_path(),class: "my-links") %> / 
+<%= link_to("Seller profile", user_path(@user.id),class: "my-links") %>
