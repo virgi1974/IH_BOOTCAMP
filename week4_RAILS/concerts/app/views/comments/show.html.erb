@@ -1,0 +1,17 @@
+<section id="section-centered">
+			<h1><%= @concert.band %>&nbsp;---&nbsp;<%= @concert.city %></h1>
+<hr>
+		<article id="comments">
+			<% @comments.each do |item| %>
+			<p> <%= item.comment %> </p>
+			<% end %>
+		</article>
+
+		<hr>
+		<%= link_to("LIST OF CONCERTS",concerts_path) %>
+		<br>
+		<%= link_to("ADD COMMENT",new_concert_comment_path(@concert.id)) %>
+
+
+</section>
+

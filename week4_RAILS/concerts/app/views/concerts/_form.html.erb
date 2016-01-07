@@ -1,0 +1,45 @@
+<p> <%= flash_message %> </p>	 
+<% if @concert.errors.any? %>
+	<ul>
+		<% @concert.errors.full_messages.each do |error| %>
+			<li style="background-color: red; margin: 5px;"> <%= error %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+
+<h1>add a new concertt</h1>
+<div id="form-new">
+	<%= form_for [@concert] do |f| %>
+		<div>
+			<%= f.label :band %>
+			<%= f.text_field :band %>
+		</div>
+		<div>
+			<%= f.label :venue %>
+			<%= f.text_field :venue %>
+		</div>
+		<div>
+			<%= f.label :city %>
+			<%= f.text_field :city %>
+		</div>
+		<div>
+			<%= f.label :date %>
+			<%= f.date_field :date %>
+		</div>
+		<div>
+			<%= f.label :price %>
+			<%= f.number_field :price %>
+		</div>
+		<div>
+			<%= f.label :description %>
+			<%= f.text_field :description %>
+		</div>
+		<hr>
+			<%= f.submit 'SAVE CHANGES',class: 'sub' %>
+		<hr>
+		<%= link_to("CANCEL",concerts_path) %>
+	<% end %>
+
+</div>
+

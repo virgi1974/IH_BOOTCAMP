@@ -1,0 +1,17 @@
+<section id="der">
+		<article id="month-concert">
+			<p> <strong> Band</strong>&nbsp;&nbsp;  <%= @concert.band %> </p>
+			<p> <strong> Venue</strong>&nbsp;&nbsp;  <%= @concert.venue %> </p>
+			<p> <strong> City</strong>&nbsp;&nbsp; <%= @concert.city %> </p>
+			<p> <strong> Date</strong>&nbsp;&nbsp; <%= @concert.date %> </p>
+			<p> <strong> Price</strong>&nbsp;&nbsp; <%= @concert.price %> </p>
+			<p> <strong> Description</strong>&nbsp;&nbsp; <%= @concert.description %> </p>
+		</article>
+		<%= link_to("CONCERTS",concerts_path) %>
+		<hr>
+
+		<%= link_to("ADD COMMENT",new_concert_comment_path(@concert.id)) %>
+
+
+</section>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concerts</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header style="border:solid;text-align:center;background-color:green;">
+	<img src="http://huwshimi.com/wp-content/themes/huwshimi/images/404.png" alt="" style="width:10%;float:left;">	
+	<h3>CONCERTS</h3>
+</header>
+<br>
+<br>
+<br>
+<%= yield %>
+<br>
+<br>
+<footer>
+	<ul style="border:solid;background-color:black;color:white;width:100%;">
+		<li>Concerts</li>
+		<li>Home</li>
+		<li>Email</li>
+	</ul>
+</footer>
+
+</body>
+</html>
+
+
+
