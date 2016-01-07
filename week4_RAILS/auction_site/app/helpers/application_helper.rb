@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def highest_bid product
-    product.bids.max.amount.to_s
+    product.bids.max.amount.to_s 
   end
 
   private

@@ -14,9 +14,11 @@
 <hr>
 
 <section id="bids">
-  <% if check_deadline(@product) == false %>
+  <% if check_deadline(@product) == false && @product.bids != [] %>
     <p>THE DEADLINE FOR THIS ITEM HAS EXPIRED</p>
     <p>THE ITEM HAS BEEN SOLD BY <%= highest_bid(@product) %> EUROS !!!</p>
+  <% elsif check_deadline(@product) == false && @product.bids == [] %>
+    <p>THE DEADLINE FOR THIS ITEM HAS EXPIRED</p>
   <% else %>
     <%= render "bidform" %>
     <%= render "bids" %>

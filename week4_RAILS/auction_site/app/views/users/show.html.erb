@@ -3,7 +3,7 @@
 <hr>
 <ul>
 <% @products.each do |product| %>
-    <li><%= link_to(product.title, user_product_path(@user.id,product.id)) %></li>
+    <li><%= link_to(product.title, user_product_path(@user.id,product.id),class: "my-links") %></li>
 <% end %>
 </ul>
 <%= link_to("Add product", new_user_product_path(@user.id),class: "my-links") %> 
