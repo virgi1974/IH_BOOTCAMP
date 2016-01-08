@@ -1,0 +1,16 @@
+.my-phrases p{
+  border: solid;
+  padding: 5px;
+  text-align: center;
+}
+#input-sentence{
+  width: 50%;
+  font-size: 1em;
+}
+#change-phrase{
+  background-color: blue;
+  color: white;
+}
+.red{
+  color: red;
+}
